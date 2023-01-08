@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="74.202393mm"
+   height="104.83302mm"
+   viewBox="0 0 74.202393 104.83302"
+   version="1.1"
+   id="svg68025"
+   inkscape:version="1.2 (1:1.2.1+202207142221+cd75a1ee6d)"
+   sodipodi:docname="Example-CutLocus-SphereThreePoints-02.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview68027"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="5.6568542"
+     inkscape:cx="137.2671"
+     inkscape:cy="394.12364"
+     inkscape:window-width="1600"
+     inkscape:window-height="832"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs68022" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(258.59272,-2.9563687)">
+    <path
+       style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#550022;stroke-width:0.584;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.752, 1.752;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       d="m -204.41832,4.052852 c 17.20653,4.988149 24.55861,31.78657 16.42134,59.85593 -5.87516,20.26624 -18.21848,35.65405 -31.1033,40.765878"
+       id="path67258"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#550022;stroke-width:0.584004;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       d="m -219.15557,5.060027 c 4.94543,-1.951915 9.96951,-2.38934 14.73725,-1.007175"
+       id="path67260" />
+    <path
+       style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#ff00ff;stroke-width:0.584004;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       d="m -237.55142,5.262015 c 5.88412,-2.182076 12.20813,-2.124041 18.43914,-0.196316"
+       id="path67262" />
+    <path
+       style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#ff00ff;stroke-width:0.584;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.752, 1.752;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       d="m -219.16965,104.69508 c -13.98137,-4.31529 -27.4977,-18.045688 -34.52926,-37.006788 -3.13678,-8.45857 -4.61639,-16.96934 -4.60179,-24.90218 0.0327,-17.7656 7.55933,-32.632717 20.74928,-37.524097"
+       id="path67264" />
+    <path
+       style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#0000ff;stroke-width:0.584004;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       d="m -219.23913,4.954982 c 1.86537,7.099707 3.63605,26.4531 4.33501,49.3462 0.88898,29.11655 -0.29228,52.933098 -2.63841,53.195758"
+       id="path67266" />
+    <path
+       style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#0000ff;stroke-width:0.584;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.58399999,1.16799998;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       d="m -217.50333,107.49475 c -0.52675,0.059 -1.06743,-1.07439 -1.59931,-3.19721"
+       id="path67268" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Century Schoolbook';-inkscape-font-specification:'Century Schoolbook, Normal';font-variant-ligatures:none;stroke-width:0.264583"
+       x="-175.37329"
+       y="59.248024"
+       id="text70848"><tspan
+         sodipodi:role="line"
+         id="tspan70846"
+         style="stroke-width:0.264583" /></text>
+  </g>
+</svg>

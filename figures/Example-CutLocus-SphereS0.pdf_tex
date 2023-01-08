@@ -1,0 +1,75 @@
+%% Creator: Inkscape 1.2 (1:1.2.1+202207142221+cd75a1ee6d), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'Example-CutLocus-SphereS0.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{347.31271878bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,1.00726389)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{Example-CutLocus-SphereS0.pdf}}%
+    \put(0.81061348,0.38224259){\color[rgb]{0.90196078,0.90196078,0.90196078}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$P$\end{tabular}}}}%
+    \put(0.75844339,0.67597607){\color[rgb]{0.90196078,0.90196078,0.90196078}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\gamma$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{Example-CutLocus-SphereS0.pdf}}%
+    \put(0.805474,0.23609642){\color[rgb]{0.90196078,0.90196078,0.90196078}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$Q$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{Example-CutLocus-SphereS0.pdf}}%
+    \put(0.68169756,0.11066868){\color[rgb]{1,1,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\eta$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{Example-CutLocus-SphereS0.pdf}}%
+    \put(0.42367502,0.98168803){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\bf{e}_3$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{Example-CutLocus-SphereS0.pdf}}%
+    \put(0.46616436,0.06102329){\color[rgb]{0.90196078,0.90196078,0.90196078}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-\bf{e}_3$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{Example-CutLocus-SphereS0.pdf}}%
+    \put(0.29376729,0.10982023){\color[rgb]{0.8,1,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\delta$\end{tabular}}}}%
+    \put(0.24938802,0.69751113){\color[rgb]{0.13333333,0.33333333,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\zeta$\end{tabular}}}}%
+    \put(0.15945494,0.39155345){\color[rgb]{0.90196078,0.90196078,0.90196078}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$P'$\end{tabular}}}}%
+    \put(0.15311224,0.23744299){\color[rgb]{0.90196078,0.90196078,0.90196078}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$Q'$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{Example-CutLocus-SphereS0.pdf}}%
+    \put(0.21806946,0.82736603){\color[rgb]{0.66666667,0.26666667,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$A$\end{tabular}}}}%
+  \end{picture}%
+\endgroup%
