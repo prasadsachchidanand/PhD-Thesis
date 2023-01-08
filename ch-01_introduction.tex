@@ -1,0 +1,137 @@
+\chapter{Introduction}\label{ch:introduction}
+
+\hfb On a Riemannian manifold $M$, the distance function $d_N(\cdot) \defeq d(N,\cdot)$\index{$d_N$} from a closed subset $N$ is fundamental in the study of variational problems. For instance, the viscosity solution of the Hamilton-Jacobi equation is given by the flow of the gradient vector of the distance function $d_N$, when $N$ is the smooth boundary of a relatively compact domain in manifolds; see  \cite{LiNi05,MaMe03}. Although the distance function $d_N$ is not differentiable at $N$, squaring the function removes this issue. Associated to $N$ and the distance function $d_N$ is a set $\cutn$,\index{\cutn} the cut locus \index{cut locus} of $N$ in $M$. The cut locus of a point (submanifold) consists of all points such that a distance minimal geodesic (see \Cref{defn:cutLocusOfPoint,cutlocus1}) starting at the point (submanifold) fails its distance minimality property. The aim of the thesis is to explore the topological and geometric properties of cut locus of a submanifold.
+
+\section{A survey of the cut locus}
+\hfb This section is devoted to the literature survey and a discussion of some known results.
+
+\vspace{0.2cm}
+\hf Cut locus of a point, a notion initiated by Henri Poincar\'{e} \cite{Poin05}, has been extensively studied (see \cite{Kob67} for a survey as well as \cite{Buc77},  \cite{Mye35}, \cite{Sak96}, and \cite{Wol79}). Prior to Poincar\'{e} it had appeared implicitly in a paper \cite{Man81}. Other articles \cite{Whi35} and \cite{Mye35,Mye36} describe topological behavior of the cut locus. Due to its topological properties, it became an important tool in the field of Riemannian geometry or Finsler geometry. We list a few references like \cite{Kli59},  \cite{Rau59}, and \cite[Chapter 5]{ChEb75} for a detailed study of cut locus of a point. We also mention the work around the Blaschke conjecture which uses the geometry of the cut locus of a point, see \cite{Bes78,McK15}. A great source of reference for articles related to cut loci is \cite[\S 4]{Sak84}. Further, articles \cite{Sak77,Sak78,Sak79} and \cite{Tak78,Tak79} discussed cut loci in symmetric spaces. For questions on the triangulability of cut loci and differential topological aspects, see \cite{Buc77,GlSi76,GlSi78,Wall77}.
+
+\vspace{0.2cm}
+\hf Cut locus of submanifolds was first studied by Ren\'{e} Thom \cite{Thom72}. We mention some references for cut locus of submanifolds where it has been analyzed via the Eikonal equations and Hamilton-Jacobi equation, for example, see \cite{AnGu11,MaMe03} as well as analyzed via topological methods, for example, see \cite{Fla65,Ozo74,Singh87A,Singh87B,Singh88}.
+
+\section{Overview of results}
+\hfb Suitable simple examples indicate that $M-\cutn$ topologically deforms to $N$. One of our main results is the following (\Cref{thm: Morse-Bott}).
+\begin{mainthm}\label{thm:ThmA}
+    \textit{Let $N$ be a closed embedded submanifold of a complete Riemannian manifold $M$ and $d:M\to \mathbb{R}$ denote the distance function with respect to $N$. If $f=d^2$, then its restriction to $M-\mathrm{Cu}(N)$ is a Morse-Bott function, with $N$ as the critical submanifold. Moreover, $M-\mathrm{Cu}(N)$ deforms to $N$ via the gradient flow of $f$.}
+\end{mainthm}
+
+\vspace{0.2cm}
+\noindent It is observed that this deformation takes infinite time. To obtain a strong deformation retract, one reparameterizes the flow lines to be defined over $[0,1]$. It can be shown (\Cref{defretM-N}) that the cut locus $\mathrm{Cu}(N)$ is a strong deformation retract of $M-N$. A primary motivation for \Cref{thm:ThmA} came from understanding the cut locus of $N=O(n,\rbb)$ inside $M= M(n,\rbb)$, equipped with the Euclidean metric. We show in \Cref{Sec:IlluminatingExample} that the cut locus is the set $\mathrm{Sing}$ of singular matrices and the deformation of its complement is not the Gram-Schmidt deformation but rather the deformation obtained from the polar decomposition, i.e., $A\in GL(n,\R)$ deforms to $A\big(\sqrt{A^T A}\,\big)^{-1}$. Combining with a result of J. J. Hebda \cite[Theorem 1.4]{Heb83} we are able to compute the local homology of $\mathrm{Sing}$ (cf \Cref{link-sing} and \Cref{locsinghom}).
+\begin{mainthm}\label{thm:ThmB}
+    \textit{For $A\in M(n,\R)$
+    \begin{displaymath}
+        H_{n^2-1-i}(\mathrm{Sing},\mathrm{Sing} -A;G)\cong \widetilde{H}^i(O(n-k,\R);G)
+    \end{displaymath}
+    where $A\in \mathrm{Sing}$ has rank $k<n$ and $G$ is any abelian group. }
+\end{mainthm}
+
+\vspace{0.2cm}
+\noindent When the cut locus is empty, we deduce that $M$ is diffeomorphic to the normal bundle $\nu$ of $N$ in $M$. In particular, $M$ deforms to $N$. Among applications, we discuss two families of examples. We reprove the known fact that $GL(n,\R)$ deforms to $O(n,\R)$ for any choice of left-invariant metric on $GL(n,\R)$ which is right-$O(n,\R)$-invariant. However, this deformation is not obtained topologically but by Morse-Bott flows. For a natural choice of such a metric, this deformation \eqref{GLdefOver2} is not the Gram-Schmidt deformation, but one obtained from the polar decomposition. We also consider $U(p,q)$, the group preserving the indefinite form of signature $(p,q)$ on $\C^n$. We show (\Cref{mainthm}) that $U(p,q)$ deforms to $U(p)\times U(q)$ for the left-invariant metric given by $\left\langle X,Y\right\rangle:=\textup{tr}(X^\ast Y)$. In particular, we show that the exponential map is surjective for $U(p,q)$ (\Cref{expsurj}). To our knowledge, this method is different from the standard proof.
+
+\vspace{0.3cm}
+\hf For a Riemannian manifold we have the exponential map at $p\in M$, $\exp_p:T_pM\to M$. Let $\nu$ denote the normal bundle of $N$ in $M$. We will modify the exponential map (see \S \ref{Sec: Thom}) to define the \emph{rescaled exponential} $\widetilde{\exp}:D(\nu)\to M$, the domain of which is the unit disk bundle of $\nu$. The main result (\Cref{Thomsp}) here is the observation that there is a connection between the cut locus $\mathrm{Cu}(N)$ and Thom space $\mathrm{Th}(\nu):=D(\nu)/S(\nu)$ of $\nu$. 
+
+
+\begin{mainthm}\label{thm:ThmC}
+    \textit{ Let $N$ be an embedded submanifold inside a closed, connected Riemannian manifold $M$. If $\nu$ denotes the normal bundle of $N$ in $M$, then there is a homeomorphism
+    \begin{displaymath}
+        \widetilde{\exp}:D(\nu)/S(\nu) \xrightarrow{\cong}M/\mathrm{Cu}(N).
+    \end{displaymath}}
+\end{mainthm}
+
+\vspace{0.3cm}
+\noindent This immediately leads to a long exact sequence in homology (see \eqref{lesThom})
+\begin{displaymath}
+	\cdots\to  H_j(\mathrm{Cu}(N)) \stackrel{i_*}{\longrightarrow}H_j(M)\stackrel{q}{\longrightarrow} \widetilde{H}_j(\mathrm{Th}(\nu))\stackrel{\partial}{\longrightarrow} H_{j-1}(\mathrm{Cu}(N))\to \cdots.
+\end{displaymath}
+This is a useful tool in characterizing the homotopy type of the cut locus. We list a few applications and related results.
+
+\begin{mainthm}\label{thm:ThmD}
+    \textit{Let $N$ be a homology $k$-sphere embedded in a Riemannian manifold $M^d$ homeomorphic to $S^d$.}
+    \begin{enumerate}
+        \item \textit{If $d\ge k+3$, then $\mathrm{Cu}(N)$ is homotopy equivalent to $S^{d-k-1}$. Moreover, if $M,N$ are real analytic and the embedding is real analytic, then $\cutn$ is a simplicial complex of dimension at most $d-1$.}
+        \item \textit{If $d=k+2$, then $\cutn$ has the homology of $S^1$. There exists homology $3$-spheres in $S^5$ for which $\cutn\simeq S^1$. However, for non-trivial knots $K$ in $S^3$, the cut locus is not homotopy equivalent to $S^1$. }
+    \end{enumerate}
+\end{mainthm}
+
+\vspace{0.3cm}
+\noindent The above results are a combination of Theorem \ref{homsph}, Theorem \ref{Buchner} and Example \ref{codim2}. In general, the structure of the cut locus may be wild (see \cite{GlSi78}, \cite{ItSa16}, and \cite{ItVi15}). S. B. Myers \cite{Mye35} had shown that if $M$ is a real analytic sphere, then $\mathrm{Cu}(p)$ is a finite tree each of whose edge is an analytic curve with finite length. Buchner \cite{Buc77} later generalized this result to cut locus of a point in higher dimensional manifolds. \Cref{Buchner}, which states that the cut locus of an analytic submanifold (in an analytic manifold) is a simplicial complex, is a natural generalization of Buchner's result (and its proof). We attribute it to Buchner, although it is not present in the original paper. This analyticity assumption also helps us to compute the homotopy type of the cut locus of a finite set of points in any closed, orientable, real analytic surface of genus $g$ (\Cref{cutlocus-surface}). In \Cref{codim2} we make some observations about the cut locus of embedded homology spheres of codimension $2$. This includes the case of real analytic knots in the round sphere $\mathbb{S}^3$.
+
+\vspace{0.3cm}
+\hf Let $M$ be a closed Riemannian manifold and $G$ be any compact Lie group acting on $M$ freely. Then it is known that $M/G$ is a manifold. Further, if the action is isometric, then the metric on $M$ induces a metric on $M/G$. If $N$ is any $G$-invariant submanifold of $M$, then $N/G$ is a submanifold of $M/G$. If the action is isometric, then we provide an equality between $\cutn/G$ and $\cutn[N/G]$ (\Cref{thm:equivariant-cut-locus}).
+
+\begin{mainthm}\label{thm:ThmE}
+    Let $M$ be a closed and connected Riemannian manifold  and $G$ be any compact Lie group which acts on $M$ freely and isometrically. Let $N$ be any $G$-invariant closed submanifold of $M$, then we have an equality
+    \begin{displaymath}
+        \mathrm{Cu}(N)/G  = \mathrm{Cu}(N/G).
+    \end{displaymath}
+\end{mainthm}
+
+\section{Outline of Chapter 2}
+\hfb The majority of this chapter is an overview of recalling some basic results in Riemannian geometry and differential topology. This chapter also deals with some known results for cut locus of a point. Although this chapter may be interesting to read and help clarify the concepts, the experts can skip the details.
+
+\subsection*{\S \ref{Sec:FermiCoordinates} Fermi coordinates}
+\hfb Fermi coordinates \index{Fermi coordinates} are important for studying the geometry of submanifolds. In this coordinate system the metric is rectangular and the derivative of metric vanishes at each point of a curve. It makes the calculations much simpler. This section is devoted to recalling the construction of Fermi coordinates in a tubular neighborhood of a submanifold of a Riemannian manifold. This requires us to define the exponential map restricted to the normal bundle. We have recollected some results which will be used to study the distance squared function from a submanifold. For example, it is shown that the distance squared function from a submanifold is sum of squares of Fermi coordinates in a tubular neighborhood of the submanifold.
+
+\subsection*{\S \ref{Sec:MorseBottFunctions} Morse-Bott theory}
+\hfb In order to study the space via critical points of some real valued function on that space, Morse theory plays an important role. If non-degenerate critical points are replaced by non-degenerate critical submanifolds (see \Cref{defn:nonDegenerateCriticalSubmanifolds}), then a generalization of Morse theory comes into the picture -- Morse-Bott theory. In this section, we have recalled the definition of a Morse function and some examples of Morse functions. In \S\ref{subsec:MorseBottFunctions} we have discussed Morse-Bott theory motivated by an example.
+
+\subsection*{\S \ref{Sec:cutLocusOfPoint} Cut locus and conjugate locus}
+\hfb In a Riemannian manifold $M$ a geodesic $\gamma$ joining $p,q\in M$ is said to be \textit{distance minimal} if $l(\gamma)=d(p,q)$, where $d$ is the Riemannian distance. Cut locus of a point captures all points in $M$ beyond which geodesics fail to be distance minimal. In \S\ref{subsec:CutLocusOfAPoint} we have discussed numerous example of cut locus of a point. Characterizations of cut locus has been discussed in terms of conjugate points (points $p$ and $q$ are said to be conjugate along a geodesic $\gamma$ if there exists a non-vanishing Jacobi field vanishes at $p$ and $q$) and number of geodesics joining the two points (\Cref{thm:CharacterizationOfCutLocusInTermsOfConjugatePoint}). In particular, it says that a cut point is either the first conjugate point or there exists more than one geodesic joining the point and the cut point. We also have a characterization which shows the existence of a closed geodesic (\Cref{thm:ExistenseOfClosedGeodesic-2}). One of the result \cite[Theorem 1]{Wol79} is very important to find the cut points, which says that the cut locus of a point is the closure of points which can be joined by more than one geodesic (\Cref{thm:ClosureOfSeisCup}).
+
+\section{Outline of Chapter 3}
+\hfb This chapter serves as a motivation for the results of the subsequent chapters. It includes a detailed discussion of cut locus of submanifolds with numerous examples.
+
+\subsection*{\S\ref{sec:cutLocusOfSubmanifolds} Cut locus of submanifolds}
+\hfb To define cut locus of subset of a Riemannian manifold, one needs to define distance minimal geodesic starting from the subset. This section starts with defining the same (\Cref{distmin}) and then the cut locus of a subset is similarly. \Cref{eg:cutLocusOfkPoints} shows that the cut locus need not be a manifold. \Cref{join} shows that the topological join of $\mathbb{S}^k$ and $\mathbb{S}^{n-k-1}$ is induced from cut locus by showing that $\cutn[\mathbb{S}^k_i] = \mathbb{S}^{n-k-1}_l$, where $\mathbb{S}_i^k \hookrightarrow \mathbb{S}^n$ denote the embedding of the $k$-sphere in the first $k+1$ coordinates and $\mathbb{S}^{n-k-1}_l$ denote the embedding of the $(n-k-1)$-sphere in the last $n-k$ coordinates. In \S \ref{subsec:separatingSet} we have defined the separating set of a subset which consists of all points which have more than one distance minimal geodesic joining the subset. In \Cref{eg:CutLocusOfEllipse} we have shown that the cut locus is strictly bigger than the separating set. 
+
+\subsection*{\S \ref{Sec:IlluminatingExample} An illuminating example}
+\hfb The main aim of this section is to find the cut locus of the set of all $n\times n$ orthogonal matrices. We have shown that the cut locus is the set of all singular matrices by showing that it is the separating set. We also analyzed the regularity of distance squared function on the singular set and outside the singular set, set of all invertible matrices. In fact, we have shown that the distance squared function is differentiable at $A$ if and only if $A\in GL(n,\mathbb{R})$ In this section we have also shown that $GL(n,\mathbb{R})$ deforms to the set of all orthogonal matrices, but we noted that this deformation is  different from one we obtained via Gram-Schmidt. We will also prove \Cref{thm:ThmB}.
+
+\section{Outline of Chapter 4}
+\hfb This chapter is based on joint work with Basu \cite{BaPr21}. Here we have explored some topological properties (relation with the Thom space (\Cref{Thomsp}), homology and homotopy groups of cut locus) and geometric properties (regularity of the distance squared function \S\ref{sec:RegularityOfDistanceSquaredFunction}, complement of cut locus deforms to the submanifold (\Cref{thm: Morse-Bott})).
+
+\subsection*{\S \ref{sec:RegularityOfDistanceSquaredFunction} Regularity of distance squared function}
+\hfb This section is motivated by the example of cut locus of $O(n,\mathbb{R})$ in $M(n,\mathbb{R})$ (\S \ref{Sec:IlluminatingExample}). We proved that the distance squared function is not differentiable on the separating set (\Cref{Lmm: singdsq}). We have also shown by an example that the distance squared function can be differentiable on points which are cut points but not separating points (\Cref{eg:CutLocusOfEllipse-2}).
+
+\subsection*{\S\ref{sec:characterizationOfCutLocus} Characterizations of \texorpdfstring{\cutn}{Cu(N)}}
+\hfb We have discussed two characterizations of cut locus. One in terms of first focal points (\Cref{defn:focalPoint}) and number of geodesics joining the submanifold to the cut points (\Cref{thm:CharacterizationOfCutLocusInTermsOfFocalPoint}) and other is in terms of separating set (\Cref{thm:SeClosureIsCutLocus}). The latter one is important for computation viewpoint. Let $\nu$\index{$\nu$} denotes the normal bundle of $N$ and $S(\nu)$\index{$S(\nu)$} be the unit sphere bundle. Consider a map
+\begin{gather*}
+    \rho:S(\nu) \to [0,\infty),\\
+    v\mapsto \sup\{t\in[0,\infty):\gamma_v|_{[0,t]} \text{ is a distance minimal geodesic from $N$}\}\index{$\rho$}
+\end{gather*}
+where $\gamma_v$ \index{$\gamma_v$} means $\gamma'(0)=v$ (also see \eqref{snu}).
+
+\begin{thmSec}
+    Let $u\in S(\nu)$. A positive real number $T$ is $\rho(u)$ if and only if $\gamma_u:[0,T]$ is a distance minimal geodesic from $N$ and at least one of the following holds:
+    \begin{enumerate}[(i)]
+        \item $\gamma_u(T)$ is the first focal point of $N$ along $\gamma_u$,
+        \item there exists $v\in S(\nu)$ with $v\neq u$ such that $\gamma_v(T)=\gamma_u(T)$.
+    \end{enumerate}
+\end{thmSec}
+
+\vspace{0.3cm}
+\begin{thmSec}
+    Let $\cutn$\index{\cutn} be the cut locus of a compact submanifold $N$  of a  complete Riemannian manifold $M$. The subset $\sen$,\index{\sen} the set of all points in $M$ which can be joined by at least two distance minimal geodesic starting from $N$,  of $\cutn$ is dense in $\cutn$.
+\end{thmSec}
+
+\subsection*{\S\ref{sec:topologicalProperties} Topological properties}
+\hfb In this section we start by showing that the cut locus is a simplicial complex for an analytic pair (following Buchner \cite{Buc77}). In \S \ref{Sec: Thom} we prove \Cref{thm:ThmC} and discuss some applications including \Cref{thm:ThmD}. We end this section by proving one of the main theorem \Cref{thm:ThmA}.
+
+\section{Outline of Chapter 5}
+\hfb We apply our study of gradient of distance squared function to two families of Lie groups - $GL(n,\R)$ and $U(p,q)$. With a particular choice of left-invariant Riemannian metric which is right-invariant with respect to a maximally compact subgroup $K$, we analyze the geodesics and the cut locus of $K$. In both cases, we obtain that $G$ deforms to $K$ via Morse-Bott flow (\Cref{CartanGLn} and \Cref{mainthm}). Although these results are deducible from classical results of Cartan and Iwasawa, our method is geometric and specific to suitable choices of Riemannian metrics. It also makes very little use of structure theory of Lie algebras. 
+
+\section{Outline of Chapter 6}
+\hfb Consider a Riemannian manifold $M$ on which a compact Lie group $G$ acts freely. It is well known that the quotient $M/G$ is a manifold. This chapter is devoted to the study of cut locus of a $G$-invariant submanifold $N$ inside $M$. We will prove \Cref{thm:ThmE}. As an application of \Cref{thm:ThmE}, we have shown some examples of cut locus in orbit space. We also discuss an application to complex hypersurfaces. Let $\pi:\mathbb{S}^{2n+1}\to \mathbb{CP}^n$ be the quotient map. If 
+\begin{displaymath}
+    X(d)=\Bigg\{[z_0:z_1:\cdots:z_n]\in \mathbb{CP}^n:\sum_{i=0}^n z_i^d=0\Bigg\}\index{$X(d)$}
+\end{displaymath}
+and $\tilde{X}(d)\defeq \pi^{-1}(X(d))$, then we make the following conjecture. 
+\begin{conj}\label{thm:cut-locus-of_X(d)}
+	The cut locus of $\tilde{X}(d)\subseteq \sbb^{2n+1}$ is $\zbb_d^{\star(n+1)}\times_{\zbb_d}\sbb^1$, where $\times_{\mathbb{Z}_d}$ is the diagonal action of $\mathbb{Z}_d$ and $\star$ denotes the topological join of spaces.  
+\end{conj}
+
+\vspace{0.3cm}
+\noindent We prove the above conjecture for two families:  $d=2, n$ arbitrary (\Cref{thm:cut-locus-of_Xn_2}) and $n=1, d$ arbitrary (\Cref{thm:cut-locus-for_X1_d}). 

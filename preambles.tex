@@ -1,0 +1,315 @@
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+\usepackage[expert]{mathdesign}
+\usepackage{amsmath,amssymb,amsthm,amsfonts}
+\usepackage{mathtools}
+\usepackage{minitoc-hyper}
+\usepackage{graphicx,wrapfig}
+\graphicspath{{./figures/}}
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
+\usepackage{emptypage}
+\usepackage[cal=boondox]{mathalfa}
+\usepackage{wasysym,textcomp,array,arcs,polynom,cancel,enumerate,dcolumn} 
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{mathrsfs}
+% \usepackage[lite]{mtpro2} % for centered widetilde
+% \usepackage{showlabels}
+\usepackage{makeidx}
+\makeindex 
+\usepackage{afterpage}
+\usepackage[all, cmtip]{xy} 
+\usepackage[Lenny]{fncychap} %Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\leftmark}
+\fancyhead[LO]{\rightmark}
+%\fancyfoot[CE,CO]{\leftmark}
+%\fancyfoot[LE,RO]{\thepage}
+
+\allowdisplaybreaks
+% \usepackage[pagewise]{lineno}\linenumbers
+% \usepackage{ebgaramond} 
+\usepackage[usenames,dvipsnames]{xcolor}
+%\usepackage{sectsty}
+
+\definecolor{aureolin}{HTML}{009EFF}
+\definecolor{tealGreen}{HTML}{008731}
+\usepackage[linktoc=all,colorlinks,linkcolor=teal,citecolor=aureolin]{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\crefname{defn}{definition}{definitions}
+\Crefname{defn}{Definition}{Definitions}
+\usepackage[symbols,nogroupskip,stylemods,postpunc=dot, automake]{glossaries-extra}
+\usepackage{tikz-cd}
+\usepackage{cases} % for equation numbering in cases
+\usepackage{longtable}
+\makeatletter
+% \usepackage{refcheck}
+
+% \newcommand\frontmatter{%
+% 	\cleardoublepage
+% 	%\@mainmatterfalse
+% 	\pagenumbering{roman}}
+
+% \newcommand\mainmatter{%
+% 	\cleardoublepage
+% 	% \@mainmattertrue
+% 	\pagenumbering{arabic}}
+
+% \newcommand\backmatter{%
+% 	\if@openright
+% 	\cleardoublepage
+% 	\else
+% 	\clearpage
+% 	\fi
+% 	% \@mainmatterfalse
+% }
+
+% \makeatother
+
+
+% NewCommands
+
+\newcommand{\Rbb}{\ensuremath{\mathbb{R}}} 
+\newcommand{\rbb}{\ensuremath{\mathbb{R}}} 
+\newcommand{\cbb}{\ensuremath{\mathbb{C}}} 
+\newcommand{\zbb}{\ensuremath{\mathbb{Z}}} 
+\newcommand{\nbb}{\ensuremath{\mathbb{N}}} 
+\newcommand{\vectorsall}{\ensuremath{\mathbf{v}_1,\mathbf{v}_2,\ldots,\mathbf{v}_n}} 
+\newcommand{\vectorsallw}{\ensuremath{\mathbf{w}_1,\mathbf{w}_2,\ldots,\mathbf{w}_n}} 
+\newcommand{\pbf}{\ensuremath{\mathbf{p}}} 
+\newcommand{\xbf}{\ensuremath{\mathbf{x}}} 
+\newcommand{\ybf}{\ensuremath{\mathbf{y}}} 
+\newcommand{\zbf}{\ensuremath{\mathbf{z}}} 
+\newcommand{\ubf}{\ensuremath{\mathbf{u}}} 
+\newcommand{\vbf}{\ensuremath{\mathbf{v}}}
+\newcommand{\wbf}{\ensuremath{\mathbf{w}}}
+\newcommand{\ebf}{\ensuremath{\mathbf{e}}}
+\renewcommand{\bf}[1]{\ensuremath{\mathbf{#1}}}
+\newcommand{\sbb}{\ensuremath{\mathbb{S}}}
+\newcommand{\cali}[1]{\ensuremath{\mathcal{#1}}}
+\newcommand{\scr}[1]{\ensuremath{\mathscr{#1}}}
+\newcommand{\mscr}{\ensuremath{\mathscr{M}}}
+\newcommand{\nscr}{\ensuremath{\mathscr{N}}}
+\renewcommand{\sf}[1]{\ensuremath{\mathsf{#1}}}
+\newcommand{\red}[1]{\textcolor{red}{#1}} 
+\newcommand{\blue}[1]{\textcolor{blue}{#1}} 
+\newcommand{\brown}[1]{\textcolor{brown}{#1}} 
+\newcommand{\magenta}[1]{\textcolor{magenta}{#1}} 
+\newcommand{\cyan}[1]{\textcolor{cyan}{#1}}
+\newcommand{\bb}[1]{\ensuremath{\mathbb{#1}}} 
+\newcommand{\delbydel}[2]{\ensuremath{\dfrac{\partial#1}{\partial#2}}} 
+\newcommand{\crf}{\ensuremath{\mathrm{Cr}(f)}} 
+\newcommand{\grad}{\ensuremath{\nabla}} 
+\newcommand{\comp}{\mathbin{\mathchoice {\compcent\scriptstyle}{\compcent\scriptstyle} {\compcent\scriptscriptstyle}{\compcent\scriptscriptstyle}}} 
+\newcommand{\compcent}[1]{\vcenter{\hbox{$#1\circ$}}} 
+\newcommand{\dbb}{\ensuremath{\mathbb{D}}} 
+\newcommand{\dist}{\ensuremath{\operatorname{dist}}} 
+\newcommand{\dbyd}[2]{\ensuremath{\dfrac{d#1}{d#2}}} 
+\newcommand{\isom}{\ensuremath{\cong}} 
+%\newcommand{\cal}[1]{\ensuremath{\mathcal{#1}}} 
+\newcommand{\acal}{\ensuremath{\cal{A}}}
+\newcommand{\im}{\ensuremath{\operatorname{im}}}
+\newcommand{\defeq}{\vcentcolon=}
+\newcommand{\eqdef}{=\vcentcolon}
+\newcommand{\define}{\overset{\mathrm{def}}{=\joinrel=}}
+\newcommand{\tensor}{\ensuremath{\otimes}}
+\newcommand{\directsum}{\ensuremath{\oplus}}
+\newcommand{\homeo}{\ensuremath{\cong}}
+\newcommand{\cutn}[1][N]{\ensuremath{\mathrm{Cu}(#1)}}
+\newcommand{\sen}{\ensuremath{\mathrm{Se}(N)}}
+\newcommand{\innerprod}[2]{\ensuremath{\left\langle #1,#2\right\rangle}}
+\newcommand{\norm}[1]{\ensuremath{\left\|#1\right\|}}
+\newcommand{\range}{\ensuremath{\mathrm{range}}}
+\newcommand{\paran}[1]{\ensuremath{\left( #1 \right)}}
+\newcommand{\curlybracket}[1]{\ensuremath{\left\{ #1 \right\}}}
+\newcommand{\squarebracket}[1]{\ensuremath{\left[ #1 \right]}}
+\newcommand{\abs}[1]{\ensuremath{\left|#1\right|}}
+\newcommand{\aTransInverse}{\ensuremath{\paran{A^T}^{-1}}}
+\newcommand{\sqrtATransAInverse}{\ensuremath{\paran{\sqrt{A^TA}}^{-1}}}
+\newcommand{\trace}[1]{\ensuremath{\mathrm{tr}\left( #1 \right)}}
+\newcommand{\cu}{\ensuremath{\mathrm{Cu}(p)}}
+\newcommand{\se}[1][p]{\ensuremath{\mathrm{Se}(#1)}} 
+\newcommand{\co}{\ensuremath{\mathrm{Co}(x_0,\delta)~}} 
+\newcommand{\costar}{\ensuremath{\mathrm{Co}^\star(x_0,\delta)~}}
+\newcommand{\Ball}{\ensuremath{\overline{B(x_0,\delta)}~}}
+\newcommand{\scal}{\mathcal{S}}
+\newcommand{\bcal}{\mathcal{B}}
+\newcommand{\hess}{\mathrm{Hess}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\CP}{\mathbb{CP}}
+\newcommand{\sss}{\mathcal{S}}
+\newcommand{\bgd}{\begin{displaymath}}
+\newcommand{\edd}{\end{displaymath}}
+\newcommand{\bgc}{\begin{center}}
+\newcommand{\edc}{\end{center}}
+\newcommand{\hf}{\hspace*{0.5cm}}
+\newcommand{\hfb}{\hspace{1cm}}
+\newcommand{\lan}{\left\langle}
+\newcommand{\ran}{\right\rangle}
+\newcommand{\upq}{U(p,q)}
+\newcommand{\ep}{\varepsilon}
+\renewcommand{\epsilon}{\varepsilon}
+\DeclareMathOperator{\spn}{span}
+\newcommand{\bigzero}{\mbox{\normalfont\Large\bfseries 0}}
+\newcommand{\ubb}{\mathcal{u}}
+\newcommand{\vbb}{\mathcal{v}}
+\newcommand{\rs}{0.7ex}
+
+
+% % -------------------New commands for todo notes-------------------------------
+% \newcommand{\doubt}[1]{\todo[color= red!40]{#1}}
+% \newcommand{\change}[1]{\todo[color= green!40]{#1}}
+% \newcommand{\info}[1]{\todo[color= blue!40]{#1}}
+% \newcommand{\improvement}[1]{\todo[color= magenta!50]{#1}}
+% \newcommand{\thiswillnotshow}[1]{\todo[disable]{#1}}
+
+\newcommand{\spmat}[1]{%
+  \left(\begin{smallmatrix}#1\end{smallmatrix}\right)%
+}
+
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it} 
+\definecolor{PropColor}{HTML}{0DC8F2}
+\definecolor{CorColor}{HTML}{FFC300}
+\definecolor{ProbColor}{HTML}{FF1212}
+
+% Theorems 
+\usepackage{thmtools}
+\usepackage[framemethod=TikZ]{mdframed}
+\mdfsetup{skipabove=1em,skipbelow=0em}
+\theoremstyle{definition}
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{Orange!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=Orange, backgroundcolor=Orange!5,
+    }
+]{thmthmbox}
+
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=NavyBlue, backgroundcolor=NavyBlue!5,
+    }
+]{thmdefnbox}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{LimeGreen!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=LimeGreen, backgroundcolor=LimeGreen!5,
+    }
+]{thmlemmabox}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{PropColor!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=PropColor, backgroundcolor=PropColor!5,
+    }
+]{thmpropbox}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{CorColor!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=CorColor, backgroundcolor=CorColor!5,
+    }
+]{thmcorbox}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{ProbColor!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=ProbColor, backgroundcolor=ProbColor!5,
+    }
+]{thmprobbox}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily, bodyfont=\normalfont
+]{thmexambox}
+
+
+
+\declaretheorem[style=thmdefnbox, name=Definition, numberwithin=section]{defn}
+\declaretheorem[style=thmthmbox, name=Theorem, numberwithin=section]{thm}
+\declaretheorem[style=thmlemmabox, name=Lemma, numberwithin=section]{lemma}
+\declaretheorem[style=thmpropbox, name=Proposition, numberwithin=section]{prop}
+\declaretheorem[style=thmprobbox, name=Conjecture, numbered=no]{conj}
+\declaretheorem[style=thmprobbox, name=Problem]{prob}
+\declaretheorem[style=thmcorbox, name=Corollary, numberwithin=section]{cor}
+\declaretheorem[style=thmexambox, name=Example, numberwithin=section]{eg}
+
+% \newtheorem{thm}{Theorem}[section]
+% \newtheorem{cor}[thm]{Corollary}
+% \newtheorem{lmm}[thm]{Lemma}
+% \newtheorem{prpn}[thm]{Proposition}
+\theoremstyle{definition}
+\newtheorem{rem}{Remark}[section]
+\newtheorem{note}{Note}[section]
+
+% \newtheorem{mainthm}{Theorem}
+\declaretheorem[style=thmthmbox, name=Theorem]{mainthm}
+\renewcommand{\themainthm}{\Alph{mainthm}}
+\declaretheorem[style=thmlemmabox, name=Lemma, numbered=no]{lemmaSec}
+\declaretheorem[style=thmthmbox, name=Theorem, numbered=no]{thmSec}
+
+
+% \theoremstyle{definition}
+% \newtheorem{defn}[thm]{Definition}
+% \newtheorem{eg}[thm]{Example}
+
+% \newtheorem*{conj}{Conjecture}
+% \newtheorem*{thma}{Theorem A}
+% \newtheorem*{thmb}{Theorem B}
+% \newtheorem*{thmc}{Theorem C}
+% \newtheorem*{thmd}{Theorem D}
+\usepackage{import}
+\usepackage{xifthen}
+% \pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+% https://tex.stackexchange.com/questions/1727/how-do-i-make-pages-which-were-intentionally-left-blank
+% \makeatletter
+%     \def\cleardoublepage{\clearpage%
+%         \if@twoside
+%             \ifodd\c@page\else
+%                 \vspace*{\fill}
+%                 \hfill
+%                 \begin{center}
+%                 This page intentionally left blank.
+%                 \end{center}
+%                 \vspace{\fill}
+%                 \thispagestyle{empty}
+%                 \newpage
+%                 \if@twocolumn\hbox{}\newpage\fi
+%             \fi
+%         \fi
+%     }
+% \makeatother
+
+% For blank page after new chapter
+% \newcommand\blankpage{%
+%     \null
+%     \thispagestyle{empty}%
+%     \addtocounter{page}{-1}%
+%     \newpage}
+% The following will automatic to the line breaking and hence avoid the overfull \hbox warning.
+\sloppy 

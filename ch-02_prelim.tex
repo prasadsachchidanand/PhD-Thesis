@@ -1,0 +1,636 @@
+\chapter[Preliminaries]{Preliminaries} \label{ch:preliminaries}
+\setcounter{mtc}{6}
+\minitoc
+\section{Fermi coordinates}\label{Sec:FermiCoordinates}\index{Fermi coordinates}
+\hfb In this section we give a brief overview of the Fermi coordinates which are generalizations of normal coordinates in Riemannian geometry. To study the distance squared function from a submanifold $N$ of a Riemannian manifold $M$, it is essential to analyze the local geometry of $M$ around $N$. For this the Fermi coordinates are the most convenient tool. In 1922, Enrico Fermi \cite{Fer22} came up  with a coordinate system in which the Christoffel symbols vanish along geodesics which makes the metric simpler. For an extensive reading we refer to the book \cite[Chapter 2]{Gr04} and an article \cite{MaMi63}.
+
+\subsection{Normal exponential map} \index{normal exponential map}
+\hfb Let $N$ be an embedded submanifold of a Riemannian manifold $M$. We define the \textit{normal bundle},\index{normal bundle} denoted by $\nu$,
+\begin{displaymath}
+    \nu \defeq \left\{(p,v):p\in N\text{ and } v\in \left(T_pN\right)^\perp\right\}, \index{$\nu$}
+\end{displaymath}
+where $(T_pN)^\perp$ is the orthogonal complement of $T_pN$. Indeed, $\nu$ is a subbundle of the restriction of the tangent bundle $TM$ to $N$. We can restrict the usual exponential map of the Riemannian manifold to the normal bundle to define the exponential map of the normal bundle. We define the \textit{exponential map of the normal bundle} as follows:\index{$\exp_{\nu}$}
+\begin{equation}\label{eq:normalExponentialMap}
+    \exp_\nu:\nu\to M,~(p,v)\mapsto \exp_p(v),
+\end{equation} 
+where $\exp_p:T_pM\to M$ is the exponential map of $M$. We may write $\exp_\nu(v)$ in short and call this the \textit{normal exponential map}. Note that we can identify $N$ as the zero section of the normal bundle and hence $N$ can be assumed to be submanifold of $\nu$. 
+\begin{lemma}\cite[Lemma 2.3]{Gr04}
+    Let $M$ be a Riemannian manifold and $N$ be any embedded submanifold. Then the normal exponential map $\exp_\nu:\nu\to M$ is a diffeomorphism from a neighbourhood of $N\subseteq \nu$ onto a neighbourhood of $N\subseteq M$. 
+\end{lemma}
+\bigskip
+Using the above lemma, let $\mathcal{U}_N$ be the largest open neighbourhood of $N\subseteq \nu$ for which $\exp_\nu$ is a diffeomorphism. We shall later be able to describe this neighbourhood in terms of a function $\rho$ \eqref{snu}. We now ready to define the Fermi coordinates. 
+\subsection{Fermi coordinate system} \index{Fermi coordinates}
+\hfb To define a system of Fermi coordinates, we need an arbitrary system of coordinates $\left(y_1,\cdots,y_k\right)$ defined in a neighborhood $\mathcal{O}\subseteq N$ of $p\in N$ together with orthogonal sections $\mathcal{E}_{k+1},\cdots,\mathcal{E}_n$ of the restriction on $\nu$ to $\mathcal{O}$.
+\begin{defn}[Fermi coordinates]\label{Defn:FermiCoordinates}
+    The \textit{Fermi coordinates} $\left(x_1,\cdots,x_n\right)$ of $N\subseteq M$ centered at $p$ (relative to a given coordinate $\left(y_1,\cdots,y_k\right)$ on $N$ and given orthogonal sections $\mathcal{E}_{k+1},\cdots,\mathcal{E}_n$ of $\nu$) are defined by
+    \begin{align*}
+        & x_l \left(\exp_{\nu} \bigg(\sum_{i=k+1}^n \tau_i \mathcal{E}_i \left(p'\right)\bigg)\right) = y_l \left(p'\right),~ l = 1,\cdots,k 
+        \\[1ex]
+        & x_m \left(\exp_{\nu} \bigg(\sum_{i=k+1}^n \tau_i \mathcal{E}_i \left(p'\right)\bigg)\right) = \tau_m,~ m = k+1,\cdots,n
+    \end{align*}
+    for $p'\in \mathcal{O}$ provided the numbers $\tau_{k+1},\cdots,\tau_n$ are small enough so that $\tau_{k+1}\mathcal{E}_{k+1}\left(p'\right)+\cdots+\tau_{n}\mathcal{E}_{n}\left(p'\right)\in \mathcal{U}_N$. 
+\end{defn}
+
+\bigskip 
+
+\hf As the normal exponential map is a diffeomorphism on the set $~\mathcal{U}_N$, $\left(x_1,\cdots,x_k,x_{k+1}\right.$ $\left.,\cdots, x_n\right)$ defines a coordinate system near $p$. In fact, the restrictions to $N$ of coordinate vector fields $ \allowbreak\partial/\partial x_{k+1},\ldots, \partial/ \partial x_n$ are orthonormal.
+\begin{lemma} \label{Lemma: geodesic in fermi}
+    Let $\gamma$ be  a unit speed geodesic normal to $N$ with $\gamma(0) = p\in N$. If $v = \gamma'(0)$, then there exists a system of Fermi coordinates $(x_1,\cdots,x_n)$ such that whenever $(p,tv)\in \mathcal{U}_N$, we have
+    \begin{align*}
+        & \kern 1cm\left.\delbydel{}{x_{k+1}}\right|_{\gamma(t)} = \gamma'(t),\\
+        & \left.\delbydel{}{x_l}\right|_p\in T_pN, \text{ and } \left.\delbydel{}{x_i}\right|_p \in (T_p N)^\perp
+    \end{align*}
+    for $1\le l\le k$ and $k+1\le i\le n.$ Furthermore, for $1\le j \le n$
+    \begin{displaymath}
+        (x_j \comp \gamma)(t) = t\delta_{j (k+1)}.
+    \end{displaymath}
+\end{lemma}
+
+\bigskip 
+
+\hf The following object will be useful while studying the distance squared function from a submanifold $N$.
+\begin{defn}\label{defn:DeltaMap}
+    Let $N$ be a submanifold of a Riemannian manifold and let $(x_1,\cdots,x_n)$ be a system of Fermi coordinates for $N$. We define $\Delta(x_1,\cdots,x_n)$ to be the non-negative number satisfying
+    \begin{displaymath}
+        \Delta^2 = \sum_{i=k+1}^n x_i^2.
+    \end{displaymath}
+\end{defn}
+
+% \bigskip 
+
+% \hf The function $\Delta$ is independent of the choice of Fermi coordinate system.
+\begin{lemma}
+    Let $p\in N$. The $\Delta$ is independent of the choice of Fermi coordinates at $p$.
+\end{lemma}
+% \vspace{-0.7cm}
+\begin{proof}
+    Let $(x_1',\cdots,x_n')$ be another system of Fermi coordinates at $p$, and let $\curlybracket{\mathcal{E}_{k+1}', \cdots, \mathcal{E}_n'}$ be the orthonormal sections of $\nu$ that give rise to it. We can write
+    \begin{displaymath}
+        \mathcal{E}_j' = \sum_{i=k+1}^na_{ij}\mathcal{E}_i
+    \end{displaymath}
+    where $(a_{ij})$ is a matrix of functions in the orthogonal group $O(n-k)$ with each $a_{ji}$ being a smooth function on $N.$ Now,
+    \begin{align*}
+        x_m\paran{\exp_\nu\paran{\sum_{j=k+1}^n \tau_j'\textcolor{blue}{\mathcal{E}_j'}}} & = x_m \paran{\exp_\nu\paran{ \sum_{j=k+1}^n\tau_j' \textcolor{blue}{\sum_{i=k+1}^na_{ij}\mathcal{E}_i}}} 
+        \\[1ex]
+        & = x_m\paran{\exp_\nu \bigg(\sum_{i=k+1}^n \bigg(\sum_{j=k+1}^na_{ij}\tau_j'\bigg) \mathcal{E}_i\bigg)}
+        \\[1ex]
+        & = \sum_{l=k+1}^n a_{ml}\textcolor[HTML]{06a3b3}{\tau_l'} 
+        \\[1ex]
+        & = \sum_{l=k+1}^n a_{ml}\textcolor[HTML]{06a3b3}{x_l' \left(\exp_\nu \bigg(\sum_{j=k+1}^n\tau_j'\mathcal{E}_j'\bigg)\right)}.
+    \end{align*}
+    Therefore, we have 
+    \begin{equation}
+        x_m = \sum_{l=k+1}^na_{ml}x_l',~m=k+1,\cdots,n.
+    \end{equation}
+    Now consider,
+    \begin{align*}
+        \sum_{m=k+1}^n x_m^2 & = \sum_{m=k+1}^n\paran{\sum_{l=k+1}^na_{ml}x_l'}^2 
+        \\[1ex]
+        & = \sum_{m=k+1}^n\paran{\sum_{l=k+1}^n\sum_{j=k+1}^n (a_{ml}x_l') (a_{mj}x_j')} 
+        \\[1ex]
+        & = \sum_{l=k+1}^n\sum_{j=k+1}^n \left(\sum_{m=k+1}^na_{ml}a_{mj}\right)x_l'x_j'\\[1ex]
+        & = \sum_{l=k+1}^n\sum_{j=k+1}^n\delta_{lj}x_l'x_j' \\[1ex]
+        & = \sum_{m=k+1}^n \left(x_m'\right)^2.
+    \end{align*}
+\end{proof}
+
+\section{Morse-Bott theory} \label{Sec:MorseBottFunctions}\index{Morse-Bott functions}
+\hfb This section will be devoted to a generalization of Morse function in which we study the space by looking at the critical points of a smooth real valued function. We will briefly recall Morse functions with a couple of examples, and then we will define Morse-Bott functions. The reference for this section will be the original article by Raoul Bott \cite{Bot54} and the book \cite[Section 3.5]{BaHu04}.
+
+\subsection{Morse functions}
+\hfb Broadly the ``functions'' and ``spaces'' are objects of study in analysis and geometry respectively. However, these two objects are related to each other. For example, on a line we can have functions like $f(x)=x,~g(x)=x^2$ which takes arbitrarily large values, whereas on the circle there does not exist any function which takes arbitrarily large value. In this way, we are able to differentiate circles with lines by seeing functions on them. Morse theory studies relations between shape of space and function defined on this space. We study the critical points of a function defined on spaces to find out information on the space. More specifically, in Morse theory we study the topology of smooth manifolds by analyzing the critical point of a smooth real valued function. If $f:M\to\mathbb{R}$ is a smooth function on a smooth manifold $M$, then using Morse theory we can find a CW-complex which is homotopy equivalent to $M$ and the CW-complex has one cell for each critical point of $f$. For a detailed study of Morse theory we refer to the book \cite{Mil63} by John Milnor.
+\begin{defn}[Critical Points] \label{defn:CriticalPoints}\index{critical points}
+    Let $M$ and $N$ be two smooth manifolds of dimension $m$ and $n$ respectively. A point $p\in M$ is said to be \emph{critical point} of a smooth function $f:M\to N$ if the differential map
+    \begin{displaymath}
+        df_p:T_pM\to T_{f(p)}N\index{$df_p$}
+    \end{displaymath}
+    does not have full rank.
+\end{defn}
+
+\bigskip 
+
+\noindent We confine our study to real-valued functions. In this case the above is equivalent to $df_p\equiv 0$. In a coordinate neighborhood $(\phi=(x_1,x_2,\ldots,x_n),U)$ around $p$, we have 
+\begin{equation}\label{eq:LocalExpressionOfCriticalPoint}
+    \delbydel{(f\comp \phi^{-1})}{x_j}(\phi(p))=0,~j=1,\cdots,n.
+\end{equation} At a critical point of $f:M\to \mathbb{R}$, we define the Hessian which is similar to the second derivative of the function. 
+\begin{defn}[Hessian of $f$ at $p$]\label{defn:Hessian}\index{Hessian}
+    Let $f:M\to \mathbb{R}$ be any smooth real valued function and $p$ be any critical point of $f$. The \emph{Hessian of $f$ at $p$} is the map
+    \begin{equation}\label{eq:LocalExpressionOfHessianMap}
+        \hess_p(f):T_pM \times T_pM\to \mathbb{R},~\hess_p(f)(V,W)=\tilde{V}\cdot \left(\tilde{W}\cdot f\right)(p),\index{$\hess_p(f)$}
+    \end{equation}
+    where $\tilde{V}$ and $\tilde{W}$ are any extensions of $V$ and $W$ respectively.
+\end{defn}
+
+\bigskip
+
+\noindent Note that the Hessian is a bilinear form of $V$ and $W$. Consider
+\begin{align*}
+    V\cdot \left(\tilde{W}\cdot f\right)(p) - W\cdot \left(\tilde{V}\cdot f\right)(p)  & = \left[\tilde{V}, \tilde{W}\right]_p\cdot f \\
+    & = df_p \left(\left[\tilde{V},\tilde{W}\right]_p\right) \\
+    & = 0.
+\end{align*}
+Thus, Hessian is a symmetric bilinear form on $T_pM\times T_pM$. The above computation, in particular, also proves that the definition is well defined, that is, it is  independent of the choice of extension. 
+
+\bigskip 
+
+\hf Any critical point is categorized by looking at the value of Hessian at that point.
+
+\begin{defn}\label{defn:nonDegenerateCriticalPoints} \index{non-degenerate critical point}
+    A critical point $p\in M$ of a smooth function $f:M\to \mathbb{R}$ is said to be \emph{non-degenerate} if the Hessian is non-degenerate. Otherwise, we call $p$ to be a \emph{degenerate} critical point. \index{degenerate critical point} The \emph{index}\index{index} of a non-degenerate critical point $p$ is the dimension of the subspace of the maximum dimension on which $\hess_pf$ is negative definite.
+\end{defn}
+
+\bigskip
+
+\noindent For example, the function $f:\mathbb{R}\to \mathbb{R} ~x\mapsto x^2$ has $0$ a critical point which is non-degenerate but $0$ is the degenerate critical point of the function $f(x)=x^3$.
+
+\begin{defn}\label{defn:MorseFunction}\index{Morse function}
+    A smooth function $f:M\to \mathbb{R}$ is said to be a \textit{Morse function}  if all its critical points are non-degenerate.
+\end{defn}
+
+\begin{eg}
+    The function 
+    \begin{displaymath}
+        f:\mathbb{R}^2\to \mathbb{R},~(x,y) \mapsto x^2-3xy^2
+    \end{displaymath}
+    is not a Morse function, as the critical point $(0,0)$ is not non-degenerate.
+\end{eg}
+
+\begin{eg}[Height function on sphere]\label{eg:HeightFunctionOnSphere}\index{height function of sphere}
+    The height function on the $n$-sphere is a Morse function with critical points $N=(0,0,\cdots, 1)$ and $S=(0,0,\cdots,-1)$. The index of $N$ and $S$ is $n$ and $0$ respectively. 
+    \begin{figure}[H]
+        \centering
+        \incfig[0.5]{sphereMorseFunction}
+        \caption{Height function on the $2$-sphere is a Morse function with two non-degenerate critical points with index $2$ and $0$.}
+        \label{fig:HeightFunctionOnSphere}
+    \end{figure}
+    
+    For this, let
+    \begin{align*}
+        & \phi_1:\mathbb{S}^n
+        \setminus\{N\}\to \mathbb{R}^n,~ \left(x_1,\cdots,x_{n+1}\right)\mapsto \left(\dfrac{x_1 }{1-x_{n+1}},\cdots,\dfrac{x_n}{1-x_{n+1}}\right),\text{ and } \\[1ex]
+        & \phi_2:\mathbb{S}^n\setminus\{S\}\to \mathbb{R}^n,~ \left(x_1,\cdots,x_{n+1}\right)\mapsto \left(\dfrac{x_1 }{1+x_{n+1}},\cdots,\dfrac{x_n}{1+x_{n+1}}\right)
+    \end{align*} 
+    be two charts of $\mathbb{S}^n$. The inverse is given by 
+    \begin{align*}
+        & \phi_1^{-1}(\mathbf{y}) = \left(\dfrac{2y_1}{\left\|\mathbf{y}\right\|^2+1}, \cdots, \dfrac{2y_n}{\left\|\mathbf{y}\right\|^2+1},\dfrac{\left\|\mathbf{y}\right\|^2-1}{\left\|\mathbf{y}\right\|^2+1}\right) \\[1ex]
+        & \phi_1^{-1}(\mathbf{y}) = \left(\dfrac{2y_1}{\left\|\mathbf{y}\right\|^2+1}, \cdots, \dfrac{2y_n}{\left\|\mathbf{y}\right\|^2+1},-\dfrac{\left\|\mathbf{y}\right\|^2-1}{\left\|\mathbf{y}\right\|^2+1}\right).
+    \end{align*} 
+    From \cref{eq:LocalExpressionOfCriticalPoint}, the critical points of $f$ will be the critical points of $\psi_i=f\circ \phi_i^{-1}:\mathbb{R}^n\to \mathbb{R},~i=1,2$. Note that 
+    \begin{align*}
+        & \psi_1(\mathbf{x}) = \dfrac{\left\|\mathbf{x}\right\|^2-1}{\left\|\mathbf{x}\right\|^2+1},~\text{ and } \psi_2(\mathbf{x}) = -\dfrac{\left\|\mathbf{x}\right\|^2-1}{\left\|\mathbf{x}\right\|^2+1},~\mathbf{x}\in \mathbb{R}^n. \\[1ex]
+        \implies & \left(d\psi_1\right)_\mathbf{x} = \frac{4 \mathbf{x}}{\left(\left\|\mathbf{x}\right\|+1\right)^2},\text{ and } \left(d\psi_2\right)_\mathbf{x} = -\frac{4 \mathbf{x}}{\left(\left\|\mathbf{x}\right\|+1\right)^2}.
+    \end{align*}
+    Therefore, the critical points are $\phi_1^{-1}(\mathbf{0})=S$ in $\mathbb{S}^n\setminus \{N\}$  and $\phi_2^{-1}(\mathbf{0})=N$ in $\mathbb{S}^n\setminus \{N\}$. Note that
+    \begin{align*}
+        & \hess_S(f) = \left(\delbydel{^2 \psi_1}{x_i\partial x_j}(\mathbf{0})\right)_{1\le i,j\le n} = 4 I_{n\times n}, \text{ and } \\[1ex]
+        & \hess_N(f) = \left(\delbydel{^2 \psi_1}{x_i\partial x_j}(\mathbf{0})\right)_{1\le i,j\le n} = -4 I_{n\times n}.
+    \end{align*}
+    Hence, both critical points are non-degenerate and index of $N$ and $S$ is $n$ and $0$ respectively.
+\end{eg}
+
+\begin{eg}[Height function on torus]\label{eg:HeightFunctionOnTorus}\index{height function of torus}
+    If $a$ and $b$ be two positive real numbers with $0<b<a$, then the torus is
+    \begin{displaymath}
+        \mathbb{T} \eqdef \left\{(x,y,z):x^2+\left(\sqrt{y^2+z^2}-a\right)^2=b^2\right\}.
+    \end{displaymath} 
+    The function 
+    \begin{displaymath}
+        f:\mathbb{T}\to \mathbb{R},~(x,y,z)\mapsto z
+    \end{displaymath}
+    is a Morse function with critical points $(0,0,\pm(a+b))$ and $(0,0,\pm(a-b))$.
+    \begin{figure}[H]
+        \centering
+        \incfig[0.45]{torusMorseFunction}
+        \caption{Height function on torus is a Morse function with four non-degenerate critical points}
+        \label{fig:HeightFunctionOnTorus}
+    \end{figure}
+\end{eg}
+
+\subsection{Morse-Bott functions}\label{subsec:MorseBottFunctions}
+\hfb Morse-Bott functions are generalizations of Morse functions where we are allowed to have critical set need not be isolated but may form a submanifold. For example, let a torus be kept horizontally (a donut is kept in a plate). If $f$ is the height function on the torus, then there are two critical submanifolds, the top and bottom circles.
+
+\vspace{0.1cm}
+\hf Let $M$ be a Riemannian manifold and $f$ be any real valued smooth function on $M$. Let $\crf$ denotes the set of all critical points of $f$ and $N$ be any submanifold of $M$  which is contained in $\crf$. For any point $p\in M$ we have the following decomposition:
+\begin{displaymath}
+    T_pM = T_pN \directsum \nu_pN,
+\end{displaymath}
+where $\nu_pN$ is the normal bundle at $p$. Note that if $p\in N$ then for any $V\in T_pN$ and $W\in T_pM$ the Hessian vanishes, i.e., $\hess_p(f)(V,W)=0$. Therefore, $\hess_p(f)$ induces a symmetric bilinear form on $\nu_pN$. Now we can define non-degenerate critical submanifold similar to the non-degenerate critical points. 
+\begin{defn}[Non-degenerate critical submanifold] \label{defn:nonDegenerateCriticalSubmanifolds}
+    Let $N\subset M$ be a submanifold of a Riemannian manifold $M$. Then $N$ is said to be \emph{non-degenerate critical submanifold} of $f$ if $N\subseteq\crf$ and for any $p\in N$ the Hessian, $\hess_p(f)$ is non-degenerate in the direction normal to $N$ at $p$.
+\end{defn}
+
+\vspace{0.1cm}
+\hf In the above definition, by $\hess_p(f)$ is non-degenerate in the direction normal to $N$ at $p$ we mean that for any $V\in \nu_pN$ there exists $W\in \nu_pN$ such that $\hess_p(f)(V,W)\neq 0$.
+
+\begin{defn}[Morse-Bott functions] \label{defn:MorseBottFunction} 
+    The function $f:M\to \mathbb{R}$ is said to be \emph{Morse-Bott} if the connected components of $\crf$ are non-degenerate critical submanifolds.
+\end{defn}
+
+% \subsection*{Examples of Morse-Bott functions}
+\begin{eg}
+    Let $f:M\to \mathbb{R}$ be a Morse function. Then the critical submanifolds are zero-dimensional and hence the Hessian $\hess_p(f)$  at any critical point $p$ is non-degenerate in every direction as all the directions are normal. So $f$ is Morse-Bott with critical submanifolds as critical points.
+\end{eg}
+
+\begin{eg}
+    Any constant function defined on a smooth manifold $M$ is a Morse-Bott function with critical submanifold $M$.
+\end{eg}
+
+\begin{eg}
+    Let $M=\mathbb{R}^2$. Define
+    \begin{displaymath}
+        f:M\to \mathbb{R},~(x,y)\mapsto x^4.
+    \end{displaymath}
+    Then the derivative map 
+    \begin{displaymath}
+        df_{(x,y)} = \left(4x^3,0\right)=(0,0) \implies x=0.
+    \end{displaymath}
+    Thus, the critical set is $\{(x,y):x=0\}$ which is $y$-axis. Now the Hessian at $(0,y)$ will be
+    \begin{align*}
+        \hess_{(0,y)}(f) = 
+        \begin{pmatrix}
+            0 & 0 \\ 
+            0 & 0
+        \end{pmatrix},
+    \end{align*}
+    which is degenerate in every direction and hence it is not a Morse-Bott function.
+\end{eg}
+
+\begin{eg}\label{eg:MorseBottDistanceSquaredFromLine}
+    Let $M=\mathbb{R}^2$ with the Euclidean distance $\dist$  and $N=\{(x,x):x\in \mathbb{R}\}$. Consider the function 
+    \begin{displaymath}
+        f:M\to \mathbb{R},~(x,y)\mapsto \dist^2((x,y),N)= \dfrac{(x-y)^2}{2}.
+    \end{displaymath} 
+    \begin{figure}[H]
+        \centering
+        \incfig[0.4]{Example-MorseBott-DistanceSquaredFromX-Axis}
+        \caption{Distance of $(x,y)$ from the line $y=x$.}
+        \label{fig:MorseBottDistanceSquaredFromLine}
+    \end{figure}
+    \noindent So we have
+    \begin{align*}
+        df_{(x,y)} = \left(x-y,y-x\right) = 0 \implies x=y.
+    \end{align*}
+    Thus, the critical submanifold is $N$. Now to see whether it is non-degenerate or not in the normal direction, we need to compute the Hessian. Let $(p,p)\in N$ be any critical point. 
+    \begin{align*}
+        \hess_{(p,p)}(f) & = 
+        \begin{pmatrix}
+            1 & -1 \\
+            -1 & 1
+        \end{pmatrix}.
+    \end{align*}
+    Note that for any $\mathbf{v}=(a,-a)\in \left(T_{(p,p)}N\right)^\perp$ with $\mathbf{v}\neq 0$, we have
+    \begin{displaymath}
+        \hess_{(p,p)}(f)(\mathbf{v},\mathbf{v})= \mathbf{v}^T \hess_{(p,p)}(f) \mathbf{v} = 4a^2\neq 0.
+    \end{displaymath} 
+    Thus, the given function is Morse-Bott.
+\end{eg}
+\begin{eg} \label{eg:MorseBottDistanceSquaredFromSphere}
+    Let $M=\mathbb{R}^{n+1}$ with the Euclidean metric $d$. If $N=\mathbb{S}^n$ be the unit sphere, then the distance between a point $\bf{p}\in \rbb^{n+1}$ and $N$ is given by
+    \begin{displaymath}
+        \dist(\bf{p},N) \defeq \inf_{\bf{q}\in N} \dist(\bf{p},\bf{q}).
+    \end{displaymath} 
+    We shall denote by $d^2$ the square of the distance. Now consider the function
+\begin{displaymath}
+    f:M\to \rbb,~~\bf{x}\mapsto \dist^2(\bf{x},N)= \left(\|\bf{x}\|-1\right)^2.
+\end{displaymath}
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \incfig[1]{Example-MorseBott-DistanceSquaredFromCircleOutside}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \incfig[1]{Example-MorseBott-DistanceSquaredFromCircleInside}
+    \end{subfigure}
+    \caption{Distance of $\mathbf{x}$ from the unit circle.}
+        \label{fig:MorseBottDistanceSquaredFromSphere}
+\end{figure}
+\noindent The function $f:M-\{\mathbf{0}\}$ is a Morse-Bott function with $N=\sbb^n$ as the critical submanifold. We will see a general version of this example in \Cref{ch:GeometricViewpointOfCutLocus}.
+\end{eg}
+
+\begin{eg}\label{eg:MorseBottSphereHeightSquared}
+    Consider the function 
+    \begin{displaymath}
+        f:\mathbb{S}^2\to \mathbb{R},~(x,y,z)\mapsto z^2.
+    \end{displaymath}
+    It is square of the height function discussed in the \Cref{eg:MorseBottDistanceSquaredFromSphere}. We claim that $f$ is a Morse-Bott function with critical set as $N=(0,0,1),~S=(0,0,-1)$ and the equator $E=\left\{(x,y,0):x^2+y^2=1\right\}$.  
+    \begin{figure}[H]
+        \centering
+        \incfig[0.5]{sphereMorseBottFunction}
+        \caption{Square of the height function on sphere has three critical submanifolds; north pole, south pole and the equator circle.\label{fig:MorseBottSphereHeightSquared}}
+    \end{figure}
+    \noindent We take the charts on $\mathbb{S}^2$ as given in \Cref{eg:HeightFunctionOnSphere}. So we have
+    \begin{align*}
+        & \psi_1:\mathbb{R}^2\to \mathbb{R},~\mathbf{p}=(x,y)\mapsto \left(\dfrac{\left\|\mathbf{p}\right\|^2-1}{1+\left\|\mathbf{p}\right\|^2} \right)^2,~\text{ and} \\[1ex]
+        & \psi_2:\mathbb{R}^2\to \mathbb{R},~\mathbf{p}=(x,y)\mapsto \left(\dfrac{1-\left\|\mathbf{p}\right\|^2}{1+\left\|\mathbf{p}\right\|^2} \right)^2.
+    \end{align*} 
+    The critical points are 
+    \begin{align*}
+        d\psi_{1_{\mathbf{p}}} = (0,0) & \implies \dfrac{8 \left(\left\|\mathbf{p}\right\|^2-1\right)}{\left(1+\left\|\mathbf{p}\right\|^2\right)^3}\mathbf{p} = \mathbf{0} \\[1ex]
+        & \implies \left\|\mathbf{p}\right\| = 1 ~\text{ or}~~ \mathbf{p} = 0.
+    \end{align*}
+    Similarly, $\psi_2$ gives the same condition and hence the critical set will be $N,S$, and $E$ (\Cref{fig:MorseBottSphereHeightSquared}). It is clear that the two submanifolds $\{N\}$ and $\{S\}$ are non-degenerate. To show that $E$ is non-degenerate, we calculate the Hessian matrix at any point of $E$, say $\mathbf{p}=(x,y,0)$. The Hessian with respect to the above charts is given by
+    \begin{displaymath}
+        \hess_\mathbf{p}(f) = 
+        \begin{pmatrix}
+            2x^2 & 2xy \\
+            2xy & 2y^2
+        \end{pmatrix}.
+    \end{displaymath}     
+    Note that for any $\mathbf{p}\in E$ the normal space $\left(T_\mathbf{p}E\right)^\perp$ is spanned by $(0,0,1)$. Since we have 
+    \begin{displaymath}
+        T_\mathbf{p}\mathbb{S}^2 =T_\mathbf{p}E\directsum \left(T_\mathbf{p}E\right)^\perp = \spn\{(-y,x,0)\} \directsum \spn\{(0,0,1)\}.
+    \end{displaymath}
+    We need to show that for any $\mathbf{v}(0,0,\alpha)$ with $\alpha\neq 0$, there exists $\mathbf{w}(0,0,\beta)$ such that $\hess_\mathbf{p}(f)(\mathbf{v},\mathbf{w})\neq 0$. For that we will identify $T_\mathbf{p}\mathbb{S}^2$ with $\mathbb{R}^2$ Consider two curves $\gamma$ and $\eta$ passing through $p$.
+    \begin{align*}
+        & \gamma(t) = \left\{(x\cos t-y\sin t,y\cos t+x\sin t,0):0\le t\le 2\pi\right\}\\
+        & \eta(t) = \left\{(x\cos t,y\cos t,\sin t):0\le t\le 2\pi\right\}.
+    \end{align*}
+    Note that $\gamma'(0)=(-y,x,0)=\mathbf{v}_1$ and $\eta'(0)=(0,0,1)=\mathbf{v}_2$. So we have
+    \begin{align*}
+        & d\phi_{1_\mathbf{p}} \left(\mathbf{v}_1\right)=\dfrac{\mathrm{d}}{\mathrm{d}t}\left(\phi_1\circ \gamma\right)(t)\big|_{t=0} =(-y,x) \\[1ex]
+        & d\phi_{1_\mathbf{p}} \left(\mathbf{v}_2\right)=\dfrac{\mathrm{d}}{\mathrm{d}t}\left(\phi_1\circ \eta\right)(t)\big|_{t=0} =(-x,-y).
+    \end{align*}
+    \begin{figure}[H]
+        \centering
+        \incfig[0.5]{curvesOnCircle}
+        \caption{The curves $\gamma$ and $\eta$ passing through $\mathbf{p}$ \label{fig:curvesOnCircle}}
+    \end{figure}
+    \noindent So, we can define an isomorphism between
+    \begin{displaymath}
+        T_\mathbf{p}\mathbb{S}^2\to \mathbb{R}^2,~(-y,x,0)\mapsto (-y,x)~\text{ and } (0,0,1)\mapsto (-x,-y).
+    \end{displaymath}
+    Now note that
+    \begin{align*}
+        \hess_{\mathbf{p}}((-x,-y),(-x,-y)) & = (-x,-y) \begin{pmatrix}
+            2x^2 & 2xy \\ 2xy & 2y^2
+        \end{pmatrix}
+        \begin{pmatrix}
+            -x\\-y
+        \end{pmatrix} \\[1ex]
+        & = (-x,-y) 
+        \begin{pmatrix}
+            -2x^3 & -2xy^2 \\ -2x^2y & -2y^3    
+        \end{pmatrix} \\[1ex]
+        & = 2x^4+2x^2y^2+2x^2y^2+2y^4 \\
+        & = 2 \left(x^2+y^2\right)^2 = 2.
+    \end{align*}
+    Thus, Hessian is non-degenerate in the normal direction and hence it is a Morse-Bott functions.
+\end{eg}
+\begin{rem}
+    The above example, in particular, shows that the critical submanifolds may have different dimensions.
+\end{rem}
+
+\begin{eg}
+    Let $f:M\to \mathbb{R}$ be a Morse-Bott function. If $\pi:X\to M$ is any smooth fiber bundle, then the composition $\pi\circ f:X\to M$ is a Morse-Bott function. 
+\end{eg}
+\bigskip
+\noindent The trace function on $SO(n,\rbb), U(n,\cbb)$ and $Sp(n,\cbb)$ is a Morse-Bott function (cf \cite[page~90, Exercise~22]{BaHu04}).
+
+\section{Cut locus and conjugate locus}\label{Sec:cutLocusOfPoint}
+\hfb Let $M$ be a complete Riemannian manifold and $p\in M$. Let $\gamma$ be a geodesic such that $\gamma(0)=p$. A \textit{cut point}\index{cut point} of $p$ along the geodesic $\gamma$ is the first point $q$ on $\gamma$ such that for any point $\tilde{q}$ on $\gamma$ beyond $q$, there exists a geodesic $\tilde{\gamma}$ joining $p$ to $\tilde{q}$ such that $l \left(\tilde{\gamma}\right)<l(\gamma)$, where $l(\gamma)$ is the length of $\gamma$. In simple words, $q$ is the first point beyond which $\gamma$ stops to minimize the distance. In this section we will recall the definition of cut locus of a point with some examples. We will also mention some important results which will be generalized in the upcoming chapters. The main references for this section are books \cite[Chapter 3, Section 4]{Sak96} and \cite[Chapter 5]{ChEb75}.
+
+\subsection{Cut locus of a point}\label{subsec:CutLocusOfAPoint}
+\hfb Let $M$ be a Riemannian manifold and $p,q\in M$ be two points. If there exists a piecewise differentiable curve joining them, then using the Riemannian metric we can measure the length of the curve. We now consider all possible curves joining these points. Then the distance between $p$ and $q$ is the infimum of the length of all (piecewise differentiable) curves joining $p$ and $q$. This distance induces a metric. We call $M$ to be \textit{complete Riemannian manifold} if $(M,d)$ is a complete metric space. From now onwards, we always consider $M$ to be a complete Riemannian manifold. A geodesic $\gamma(t),~t\in[a,b]$ is said to be \emph{extendable} if it can be extended to a geodesic $\gamma(t),~t\in[c,d]\supsetneq [a,b]$. A Riemannian manifold is said to be \textit{geodesically complete}\index{geodesically complete} if any geodesic can be extendable for all $t\in \mathbb{R}$. Then the Hopf-Rinow Theorem \cite{HoRi31} says that these two notions of completeness are equivalent. If a manifold is not complete, then we can not always extend a geodesic. For example, $\mathbb{R}^2\setminus\{\bf{0}\}$ is not complete and the geodesic $\gamma(t)=t,~t>0$ is not extendable in the negative $x$-axis. This problem does not arise if the manifold is complete. The more is true which says that $M$ is complete if and only if every geodesic can be extended for infinite time. The completeness of $M$ also guarantees that any two points can be joined by a distance minimal geodesic which is defined as follows.
+
+\begin{defn}[Distance minimal geodesic]\index{distance minimal geodesic}
+    A geodesic joining $p$ and $q$ is said to be \textit{distance minimal} if the length of the geodesic is equal to the distance between these points, i.e., $l(\gamma)=d(p,q)$.
+\end{defn}
+
+\vspace{0.1cm}
+\hf We shall now define the cut locus, $\cutn[p]$ of a point $p$ in a complete Riemannian manifold $M$. The notion of cut locus was first introduced for convex surfaces by Henri Poincar\'{e} \cite{Poin05} in 1905 under the name \textit{la ligne de partage} meaning \textit{the dividing line}.
+
+\begin{defn}[Cut locus of a point]\label{defn:cutLocusOfPoint}\index{cut locus of a point}
+    Let $M$ be a complete Riemannian manifold and $p\in M$. If $\cu$ denotes the \emph{cut locus} of $p$, then a point $q\in \cu$ if there exists a minimal geodesic joining $p$ to $q$ any extension of which beyond $q$ is not minimal. 
+\end{defn}
+
+\vspace{0.1cm}
+\noindent Consider the set
+\begin{displaymath}
+    S=\{s>0:\gamma(t),~0\le t\le s \text{ is a distance minimal geodesic}\}.
+\end{displaymath}
+\noindent If $S=(0,t_0)$, then $\gamma(t_0)$ is the cut point of $p$ along $\gamma$, and if $S=(0,\infty)$, then the point $p$ does not have a cut locus along $\gamma(t)$. 
+
+\vspace{0.1cm}
+\noindent Note that if $q_0$ is a point on the geodesic $\gamma(t)$ which comes after the cut point, i.e., $q=\gamma(t_0)$ and $q_0=\gamma(t),~t>t_0$, then there  is a geodesic $\eta(t)$ joining $p$ to $q_0$ such that $l(\eta)<l(\gamma)$ (see \Cref{fig:shorterGeodesicExists}).
+\begin{figure}[!htb]
+    \centering
+    \incfig[0.5]{shorterGeodesicExists}
+    \caption{A point which is beyond cut point can be joined by a shorter geodesic\label{fig:shorterGeodesicExists}}
+\end{figure}
+
+\vspace{0.3cm}
+\noindent If $q_0$ comes before the cut point $q$, then we can not find any geodesic shorter than $\gamma$ joining $p$ to $q_0$. Moreover, we even can not find another geodesic $\eta$ joining $p$ to $q_0$ such that $l(\gamma)=l(\eta)$. So we can say that if $q_0$ is coming before cut point, then $\gamma$ is the only minimal geodesic joining $p$ to $q_0$. To prove this fact, we assume that if $\eta$ is another geodesic joining $p$ to $q_0$ such that $l(\gamma)=l(\eta)$ then 
+\begin{displaymath}
+    \delta(t)= 
+    \begin{cases}
+        \eta(t),~0\le t\le t_1 \\
+        \gamma(t),~0\le t_1\le t_0
+    \end{cases}
+\end{displaymath}
+is a curve such that $l(\delta)=d(p,q)=l(\gamma)$. Choose two points $q_1$ and $q_2$ sufficiently close to $q_0$ as shown in \Cref{fig:shorterGeodesicDoesNotExists}.
+\begin{figure}[!htpb]
+    \centering
+    \incfig[0.35]{shorterGeodesicDoesNotExists}
+    \caption{If a point appears before the cut point along the geodesic, then it can not be joined by two or more minimal geodesics\label{fig:shorterGeodesicDoesNotExists}}
+\end{figure}
+\noindent Then $\alpha$ is a distance minimal geodesic joining points $q_1$ and $q_2$ and hence we got a curve $\zeta$ which is $\eta$ from $p$ to $q_1$, $\alpha$ from $q_1$ to $q_2$ and $\gamma$ from $q_2$ to $q$. Note that $l(\zeta)$ is less than the distance between $p$ and $q$, which is a contradiction.
+
+\vspace{0.1cm}
+\noindent We now will discuss some examples.
+\begin{eg}
+    Let $M=\mathbb{R}^n$ be the $n$-Euclidean plane equipped with the Euclidean metric. The cut locus of any point is a null set because any geodesic never fails to satisfy its distance minimizing property.
+    \begin{figure}[!htb]
+        \centering
+        \incfig[0.6]{Example-CutLocus-EuclideanSpace}
+        \caption{Cut locus of $(0,0)$ in $\mathbb{R}^2$ \label{fig:Example-CutLocus-EuclideanSpace}}
+    \end{figure}
+     
+\end{eg}
+
+\begin{eg}[Cut locus of a point in $n$-sphere]
+    Let $M=\mathbb{S}^n$ be the $n$-sphere with the round metric. The geodesics are great circles. The cut locus of the south pole is the north pole. 
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}{.30\textwidth}
+          \centering
+          \incfig[0.9]{Example-Sphere-CutLocusPoint-1}
+          \caption{}
+          \label{fig:Sphere-CutLocusPoint-01}
+        \end{subfigure}%
+        \begin{subfigure}{.30\textwidth}
+          \centering
+          \incfig[.9]{Example-Sphere-CutLocusPoint-2}
+          \caption{}
+          \label{fig:Sphere-CutLocusPoint-02}
+        \end{subfigure}
+        \begin{subfigure}{.30\textwidth}
+            \centering
+            \incfig[.9]{Example-Sphere-CutLocusPoint-3}
+            \caption{}
+            \label{fig:Sphere-CutLocusPoint-03}
+          \end{subfigure}
+        \caption{Cut locus of south pole in $\mathbb{S}^2$}
+            \label{fig:Sphere-CutLocusPoint}
+    \end{figure}
+    \noindent In \Cref{fig:Sphere-CutLocusPoint} we have proven the claim. If $\gamma$ is a geodesic from south pole $S$ to north pole $N$, then the length of $\gamma$ is $\pi$ which is also the distance between these two points. Extending this geodesic beyond $N$ (\Cref{fig:Sphere-CutLocusPoint-02}) makes its length more than $\pi$, whereas the distance between $S$ to $P$ is less than $\pi$ (\Cref{fig:Sphere-CutLocusPoint-03}).
+\end{eg}
+
+\begin{eg}[Flat torus]
+    Consider $[0,1]\times [0,1]\subseteq \mathbb{R}^2$. We identify $(x,0)$ with $(x,1)$ and $(0,y)$ with $(1,y)$ where $x,y\in [0,1]$. The obtained quotient space is the flat torus. The metric is naturally induced from the Euclidean metric and hence the geodesics are straight lines. If $p$ be the center $\left(\frac{1}{2},\frac{1}{2}\right)$, then the cut locus is the wedge of two circles.
+    \begin{figure}[!htpb]
+        \centering
+        \begin{subfigure}{.45\textwidth}
+          \centering
+          \incfig[0.5]{Example-Torus-CutLocusPoint-03}
+          \caption{Extending $\gamma$ beyond the blue line fails to be distance minimal}
+        \end{subfigure}%
+        \begin{subfigure}{.45\textwidth}
+            \centering
+            \incfig[0.43]{Example-Torus-CutLocusPoint}
+            \caption{cut locus of $p$}
+          \end{subfigure}
+        \caption{Cut locus of a point in a flat torus}
+            \label{fig:Torus-CutLocusPoint}
+    \end{figure}
+\end{eg}
+
+% \begin{eg}[Torus with product metric]
+%     Let $M=\mathbb{S}^1\times \mathbb{S}^1$ with the product metric. Then the cut locus a point is $\mathbb{S}^1\vee \mathbb{S}^1$.
+%     \begin{figure}[H]
+%         \centering
+%         \begin{subfigure}{.45\textwidth}
+%           \centering
+%           \incfig[0.6]{Example-Torus-CutLocusPointProductMetric-01}
+%           \caption{Extending $\gamma$ beyond the point $q$ fails to be distance minimal}
+%         \end{subfigure}%
+%         \begin{subfigure}{.45\textwidth}
+%             \centering
+%             \incfig[0.5]{Example-Torus-CutLocusPointProductMetric}
+%             \caption{cut locus of $p$}
+%           \end{subfigure}
+%         \caption{Cut locus of a point in a flat torus}
+%             \label{fig:Torus-CutLocusPointProductMetric}
+%     \end{figure}
+% \end{eg}
+
+\begin{eg}[Real projective planes]\label{eg:CutLocusofPointRPn}
+    We obtain the real projective plane $\mathbb{RP}^n$ by identifying the antipodal points of the round sphere $\mathbb{S}^n$. The metric on $\mathbb{RP}^n$ is induced from the metric on $\mathbb{S}^n$. If $\pi:\mathbb{S}^n\to \mathbb{RP}^n,~p,-p\mapsto [p]$, then 
+    \begin{displaymath}
+         \left\langle X,Y \right\rangle_{[p]}\eqdef \left\langle \left(d\pi_p\right)^{-1}(X),\left(d\pi_p\right)^{-1}(Y) \right\rangle_p
+    \end{displaymath}
+    is a metric on $\mathbb{RP}^n$. Since the antipodal map is an isometry of $\mathbb{S}^n$, the map $\pi$ is a local isometry. Let $[p]\in \mathbb{RP}^n$ such that it is the image of north and south pole under the map $\pi$. Then the image of the equator of $\mathbb{S}^n$ under the quotient map $\pi$, $\mathbb{RP}^{n-1}$, is the cut locus of $[p]$. We will see a generalization of similar result in \Cref{ch:equivariantCutLocusTheorem}.
+\end{eg}
+
+\begin{eg}[Cut locus a point in cylinder]
+    Note that for a given point $p$ if more than one distance minimal geodesic joining $p$ and $q$ exists, then $q$ is a cut point. Using this, we observed that the cut locus of a point in cylinder is a line (shown in \Cref{fig:Example-Cylinder-CutLocusPoint}). We also note that the point $-p$ is the closest point and there exists a closed geodesic passing through $-p$ starting and ending at $p$. This fact is more generally true (see \Cref{thm:ExistenseOfClosedGeodesic-2}).  Generalizing this example, the cut locus of a point $(\mathbf{p},\mathbf{v})\in\mathbb{S}^n\times \mathbb{R}^m$ with the product metric is $\{-\mathbf{p}\}\times \mathbb{R}^m$.
+    \begin{figure}[H]
+        \centering
+        \incfig[0.3]{Example-Cylinder-CutLocusPoint}
+        \caption{Cut locus of a point in a cylinder\label{fig:Example-Cylinder-CutLocusPoint}}
+    \end{figure}
+    
+\end{eg}
+
+\subsection{Conjugate locus of a point}\index{conjugate locus}
+\hfb Let $M$ be a Riemannian manifold and $\gamma$ be any curve defined on $[a,b]$. A \textit{variation of $\gamma$}\index{variation of a curve} is a function $\Gamma:[a,b]\times (-\varepsilon,\varepsilon)\to M$ such that $\Gamma(t,0)=\gamma(t)$. So $\Gamma$ is a one-parameter family of curves $\gamma_s(t)\defeq \Gamma(t,s)$. If each of $\gamma_s$ is a geodesic, then we call it is a \textit{geodesic variation} \index{geodesic variation}. In this section by variation we mean the geodesic variation. The variation field $\delbydel{\Gamma}{s}(t,0)$ is called a \textit{Jacobi field} and we will denote it by $J(t)$.
+
+\bigskip
+\hf Let $\gamma$ be a geodesic. We say that a point $q\in M$ on $\gamma$ is \textit{conjugate to $p\in M$} if we can find a variation $\gamma_s$ of $\gamma$ such that $\gamma_s(0)=p$ for $s\in (-\varepsilon,\varepsilon)$ and each of the geodesic $\gamma_s$ meet \textit{infinitesimally} at $q$. That is, if $\gamma(t_0)=q$, then
+\begin{displaymath}
+    \left.\delbydel{\gamma_s}{t}\right|_{(t,s)=(0,0)}=0 = \left.\delbydel{\gamma_s}{t}\right|_{(t,s)=(t_0,0)}.
+\end{displaymath}
+The conjugate points can be defined in two more equivalent ways. One of them uses the Jacobi field and other uses the exponential map. Recall that a Jacobi field along a geodesic $\gamma$ satisfies 
+\begin{displaymath}
+    \nabla_{\dot{\gamma}}\nabla_{\dot{\gamma}}J + R \left(\dot{\gamma},J\right)\dot{\gamma}=0,
+\end{displaymath}
+where $R$ is the Riemann curvature tensor.
+\begin{defn}[Conjugate points in terms of Jacobi fields] \label{defn:ConjugatePointsInTermsOfJacobiFields}\index{conjugate points via Jacobi fields}
+    A point $p$ is said to be \textit{conjugate to q along a geodesic $\gamma$} if there exists a non-vanishing Jacobi field along $\gamma$ which vanishes at $p$ and $q$.
+\end{defn}
+\begin{figure}[H]
+    \centering
+    \incfig[0.5]{ConjugateLocusIllustration}
+    \caption{$p$ and $q$ are conjugate to each other along $\gamma$\label{fig:sample}}
+\end{figure}
+
+\begin{defn}[Conjugate points in terms of exponential map] \label{defn:ConjugatePointsInTermsOfExponentialMap}\index{conjugate points via exponential map}
+    For a point $p\in M$ we say that $\mathbf{v}\in T_pM$ is a \textit{tangent conjugate point of $p$} if the derivative of the exponential map is singular at $\mathbf{v}$ i.e., $\det \left(d \left(\exp_p\right)_\mathbf{v}\right)=0$. The point $q\defeq \exp_p(\mathbf{v})$ is said to be \textit{conjugate point of $p$} along the geodesic $\gamma(t)=\exp_p(t \mathbf{v})$. 
+\end{defn}
+\vspace{0.3cm}
+For a proof of equivalence of these three definitions we refer the reader to books on Riemannian geometry, for example see \cite{Car92}. 
+
+\vspace{0.3cm} 
+\hf The \textit{multiplicity of a conjugate point}\index{multiplicity of a conjugate point} is defined to be the nullity of $d(\exp_p)_\mathbf{v}$. If nullity is one, then we say it is first conjugate point.\index{first conjugate point} 
+\vspace{0.3cm}
+\begin{eg}
+    Let $M=\mathbb{R}^n$ with the Euclidean metric, then there are no conjugate points along any geodesic. 
+\end{eg}
+
+\begin{eg}
+    If $M=\mathbb{S}^n$ with the round metric, then any antipodal points are conjugate to each other along any great circles. In particular, south pole and north poles are conjugate to each other.
+\end{eg}
+
+\begin{eg}\label{eg:ConugatePointsonTorus}
+    If $M$ is a flat torus, then there are no conjugate points along any geodesic. Recall that metric is flat if and only if the Riemann curvature tensor $R$ vanishes, which implies the Jacobi field is affine and vanishes at two points forced it to be zero everywhere. This example, in particular, proves that if $M$ is flat, then there are no conjugate points along any geodesic.
+\end{eg}
+\begin{eg}
+    Let $M$ be the real projective plane, $\mathbb{RP}^n$, with the metric induced from $\mathbb{S}^n$. Here any point $p$ is conjugate to itself along any geodesic.   
+\end{eg}
+
+
+\subsection{Some results involving cut and conjugate locus}
+\hfb We will present some results related to the two concepts. As most of the results are standard, we will not provide proofs. Instead, we will mention references for each.
+
+\vspace{0.3cm}
+\hf The following result is one of the most important characterization of cut locus in terms of first conjugate point.
+\begin{thm}\cite[Chapter 3, Proposition 4.1]{Sak96}\label{thm:CharacterizationOfCutLocusInTermsOfConjugatePoint}
+    Let $\gamma$ be a unit speed geodesic. Then $q=\gamma(t_0)$ is a cut point of $p=\gamma(0)$ along $\gamma$ if either of the following holds.
+    \begin{enumerate}[(i)]
+        \item The point $q=\gamma(t_0)$  is the first conjugate point of $p$ along $\gamma$.
+        \item There exists at least two distance minimal geodesic joining $p$ to $q$.
+    \end{enumerate}
+\end{thm}
+\vspace{0.3cm}
+\noindent The next result is also a relation between the two loci. In particular, it states that the cut point of $p$ always comes before (if not the same) the conjugate point.
+
+\begin{thm}\cite[Theorem 4.1]{Kob67}
+    Let $\gamma$ be a unit speed geodesic starting at $p$. Let $q=\gamma(t_0)$ be the first conjugate point along $\gamma$. Then $\gamma$ is not a distance minimal geodesic beyond $q$.
+\end{thm}
+
+\vspace{0.3cm}
+\noindent There is one more characterization of the cut locus in terms of number of geodesics joining the point to the cut point. For $p\in M$ we define the set $\mathrm{Se}(p)$ as 
+\begin{equation}\label{eq:SeSetofPoint}
+    \mathrm{Se}(p) \defeq
+    \left\{q\in M ~\middle|~
+        \begin{aligned}
+            & \text{ there exists at least two distance }\\
+            & \text{minimal geodesics joining $p$ to $q$}
+        \end{aligned}
+    \right\}
+\end{equation}
+Note that $\mathrm{Se}(p)\subseteq \cutn[p]$. Franz-Erich Wolter in 1979 showed that the closure of $\mathrm{Se}(p)$ is the cut locus. 
+\begin{thm}\cite[Theorem 1]{Wol79}\label{thm:ClosureOfSeisCup}
+    Let $M$ be a complete Riemannian manifold and $p$ be any point in $M$. Then 
+    \begin{displaymath}
+        \overline{\mathrm{Se}(p)} = \cutn[p].
+    \end{displaymath}
+\end{thm} 
+\bigskip
+The above theorem, in particular, shows that the cut locus of a point is a closed set. He also proved that the distance squared function from the point $p$ is not differentiable on the set $\mathrm{Se}$.
+\begin{thm}\cite[Lemma 1]{Wol79}
+    Let $d^2(p,\cdot)$ denotes the square of the distance from the point $p$. Let $q\in \mathrm{Se}(p)$ and let $\gamma_1$ and $\gamma_2$ be two distance minimal geodesics joining $p$ to $q$. Then the directional derivative of $d^2(p,\cdot)$ does not exist at $q$ in the direction of $\gamma_i,~i=1,2$.
+\end{thm}
+\bigskip 
+\noindent For some special point of the cut locus of $p$ we can improve \Cref{thm:CharacterizationOfCutLocusInTermsOfConjugatePoint}.
+\begin{thm}\cite[Theorem 4.4]{Kob67}\label{thm:ExistenseOfClosedGeodesic-1}
+    Let $q$ be a cut point of $p$ and we assume that it is the closest point of $p$. Then $q$ is either conjugate to $p$ along a minimal geodesic joining these two points, or $q$ is the mid-point of a closed geodesic starting and ending at $p$.
+\end{thm}
+\bigskip 
+We can even make the above theorem sharper if we provide an additional condition. 
+
+\vspace{0.3cm}
+\begin{thm}\cite[Theorem 4.5]{Kob67}\label{thm:ExistenseOfClosedGeodesic-2}
+    Let $p$ be any point in $M$ such that $d(p,\cutn[p])$ is the smallest and $q$ be any cut point closest to $p$. Then either $q$ is conjugate to $p$  with respect to a distance minimal geodesic joining $p$ and $q$ or $q$ is the mid-point of a closed geodesic starting and ending smoothly at $p$.
+\end{thm}
