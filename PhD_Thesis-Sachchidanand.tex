@@ -1,0 +1,76 @@
+\documentclass[12pt, twoside]{book}
+
+\input{preambles.tex}
+
+\makeglossaries
+
+\input{frontmatter/listofSymbols.tex}
+
+\begin{document}
+	\frontmatter
+	\input{frontmatter/titlePage.tex}
+	
+	\chapter*{}
+	% \pagestyle{empty}
+	\vspace{4.0in}
+	\begin{center}
+		Copyright by \\[.2cm]
+		Sachchidanand Prasad \\[0.2cm]
+		2022
+	\end{center}
+	
+	\chapter*{Declaration}
+	\input{frontmatter/declaration.tex}
+	% \addcontentsline{toc}{chapter}{Declaration}
+
+	\chapter*{Certificate}
+	\input{frontmatter/certificate.tex}
+	% \addcontentsline{toc}{chapter}{Certificate}
+
+	\chapter{Acknowledgements}
+	\input{frontmatter/acknowledgement.tex}
+	%\addcontentsline{toc}{chapter}{Acknowledgements}
+
+	\chapter*{}
+	\input{frontmatter/dedication.tex}
+	% \addcontentsline{toc}{chapter}{Dedication}
+
+	\chapter*{Publications related to the thesis}
+	\input{frontmatter/publications.tex}
+
+	\chapter{Abstract}
+	\input{frontmatter/abstract.tex}
+
+
+	\dominitoc
+	\tableofcontents
+	% \printglossary[type=symbols,style=long,title={List of Symbols}]
+
+	\listoffigures
+	\addcontentsline{toc}{chapter}{List of figures}
+	
+	\chapter{Notations}
+	\input{frontmatter/notations.tex}
+	% Main matter
+	\mainmatter
+
+	\input{ch-01_introduction.tex}
+	\input{ch-02_prelim.tex}
+	\input{ch-03_examples.tex}
+	\input{ch-04_geometry-of-cut-locus.tex}
+	\input{ch-05_application-to-Lie-groups.tex}
+	\input{ch-06_equivariant-cut-locus.tex}
+
+
+	%The endmatter
+	\backmatter
+	\addcontentsline{toc}{chapter}{Bibliography}
+	\bibliographystyle{apalike}
+	\bibliography{MyRef}
+	
+	\newpage\hbox{}\thispagestyle{empty}\newpage
+	
+	\addcontentsline{toc}{chapter}{Index}
+	\printindex 
+	\thispagestyle{empty}
+\end{document}
